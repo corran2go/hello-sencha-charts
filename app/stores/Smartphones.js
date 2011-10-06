@@ -1,5 +1,3 @@
-HelloCharts.log('Smartphones store loaded');
-
 HelloCharts.stores.smartphones = new Ext.data.JsonStore({
   fields: [
     'quarter',
@@ -74,3 +72,5 @@ HelloCharts.stores.smartphones = new Ext.data.JsonStore({
     }
   ]
 });
+
+HelloCharts.log('Smartphones store loaded');
