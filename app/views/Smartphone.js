@@ -47,6 +47,8 @@ HelloCharts.views.smartphone = new Ext.chart.Panel({
           type: 'Numeric',
           minimum: 0,
           maximum: 100,
+          minorTickSteps: 1,
+          majorTickSteps: 10,
           position: 'left',
           fields: [
             'android',
@@ -57,7 +59,7 @@ HelloCharts.views.smartphone = new Ext.chart.Panel({
             'windowsphone',
             'windowsmobile'
           ],
-          title: 'Market Share Sales in %'
+          title: 'Market Share Smartphone Sales in %'
         },
         {
           type: 'Category',
