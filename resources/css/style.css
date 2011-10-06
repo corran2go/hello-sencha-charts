@@ -1,41 +1,5 @@
-.dash-header-name {
-  margin-left: 90px;
-  font-size: 90%;
-}
-
-.x-toolbar-title {
-	color: white !important;
-	text-shadow: rgba(0, 0, 0, 0.5) 0 -0.08em 0 !important;
-  font-size: 90%;
-}
-
-.x-toolbar-title-right {
-	text-align: right;
-}
-
 /* Landscape */
 @media screen and (orientation:landscape) {
-  .dash-list-item-container {
-    font-size: 30px !important;
-    float: right;
-  }
-  .item-list-space {
-    margin-right: 21px;
-  }
-  .dash-list-item-value {
-    font-weight: normal;
-  }
-  .dash-list-item-percent {
-    font-size: 20px !important;
-    font-weight: bold;
-    float: left;
-    margin-top: 8px;
-  }
-  .dash-list-level-down {
-    font-weight: bold;
-    color: grey;
-    margin-left: 4px;
-  }
   .loading-image {
     margin-left: 496px;
     margin-top: 366px;
@@ -44,28 +8,6 @@
 
 /* Portrait */
 @media screen and (orientation:portrait) {
-  .dash-list-item-container {
-    font-size: 18px !important;
-    float: right;
-    margin-top: 12px;
-    margin-right: -1px;
-  }
-  .item-list-space {
-    margin-right: 14px;
-  }
-  .dash-list-item-value {
-    font-weight: normal;
-  }
-  .dash-list-item-percent {
-    font-size: 16px !important;
-    font-weight: bold;
-    float: left;
-  }
-  .dash-list-level-down {
-    font-weight: bold;
-    color: grey;
-    margin-left: 4px;
-  }
   .loading-image {
     margin-left: 366px;
     margin-top: 496px;
