@@ -1,5 +1,4 @@
 HelloCharts.views.smartphoneChart = new Ext.chart.Chart({
-  theme: 'Demo',
   store: HelloCharts.stores.smartphones,
   animate: false,
   shadow: true,
@@ -7,13 +6,6 @@ HelloCharts.views.smartphoneChart = new Ext.chart.Chart({
     position: 'top'
   },
   interactions: [
-    'reset',
-    {
-      type: 'panzoom',
-      axes: {
-        left: {}
-      }
-    },
     {
       type: 'iteminfo',
       listeners: {
@@ -31,10 +23,6 @@ HelloCharts.views.smartphoneChart = new Ext.chart.Chart({
   axes: [
     {
       type: 'Numeric',
-      minimum: 0,
-      maximum: 100,
-      minorTickSteps: 1,
-      majorTickSteps: 10,
       position: 'left',
       fields: [
         'android',
@@ -45,12 +33,30 @@ HelloCharts.views.smartphoneChart = new Ext.chart.Chart({
         'windowsphone',
         'windowsmobile'
       ],
+      minimum: 0,
+      maximum: 70,
+      minorTickSteps: 1,
+      majorTickSteps: 10,
+      grid: {
+        odd: {
+          opacity: 1,
+          fill: '#ddd',
+          stroke: '#bbb',
+          'stroke-width': 1
+        }
+      },
+      label: {
+        font: '16px Helvetica, sans-serif'
+      },
       title: 'Market Share Smartphone Sales in %'
     },
     {
       type: 'Category',
       position: 'bottom',
       fields: [ 'quarter' ],
+      label: {
+        font: '16px Helvetica, sans-serif'
+      },
       title: 'Quarter of the Year'
     }
   ],
@@ -61,7 +67,7 @@ HelloCharts.views.smartphoneChart = new Ext.chart.Chart({
         size: 7,
         radius: 7
       },
-      smooth: true,
+      smooth: false,
       axis: 'left',
       xField: 'quarter',
       yField: 'android',
@@ -73,7 +79,7 @@ HelloCharts.views.smartphoneChart = new Ext.chart.Chart({
         size: 7,
         radius: 7
       },
-      smooth: true,
+      smooth: false,
       axis: 'left',
       xField: 'quarter',
       yField: 'ios',
@@ -85,7 +91,7 @@ HelloCharts.views.smartphoneChart = new Ext.chart.Chart({
         size: 7,
         radius: 7
       },
-      smooth: true,
+      smooth: false,
       axis: 'left',
       xField: 'quarter',
       yField: 'symbian',
@@ -97,7 +103,7 @@ HelloCharts.views.smartphoneChart = new Ext.chart.Chart({
         size: 7,
         radius: 7
       },
-      smooth: true,
+      smooth: false,
       axis: 'left',
       xField: 'quarter',
       yField: 'blackberry',
@@ -109,7 +115,7 @@ HelloCharts.views.smartphoneChart = new Ext.chart.Chart({
         size: 7,
         radius: 7
       },
-      smooth: true,
+      smooth: false,
       axis: 'left',
       xField: 'quarter',
       yField: 'bada',
@@ -121,7 +127,7 @@ HelloCharts.views.smartphoneChart = new Ext.chart.Chart({
         size: 7,
         radius: 7
       },
-      smooth: true,
+      smooth: false,
       axis: 'left',
       xField: 'quarter',
       yField: 'windowsphone',
@@ -133,7 +139,7 @@ HelloCharts.views.smartphoneChart = new Ext.chart.Chart({
         size: 7,
         radius: 7
       },
-      smooth: true,
+      smooth: false,
       axis: 'left',
       xField: 'quarter',
       yField: 'windowsmobile',
