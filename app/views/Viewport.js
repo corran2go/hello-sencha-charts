@@ -2,7 +2,8 @@ HelloCharts.views.Viewport = Ext.extend(Ext.Panel, {
   fullscreen: true,
   layout: 'card',
   items: [
-    HelloCharts.views.smartphonePanel
+    HelloCharts.views.smartphonePanel,
+    HelloCharts.views.browserPanel
   ],
   layoutOrientation: function(orientation, w, h) {
     if (orientation == 'portrait') {

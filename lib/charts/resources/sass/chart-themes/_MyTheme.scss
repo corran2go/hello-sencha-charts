@@ -1,0 +1,82 @@
+@import 'include/variables';
+
+chart {
+    axis {
+        label {
+        }
+
+        title {
+        }
+    }
+
+    series {
+        label {
+        }
+        
+        &:nth-child(1) {
+            fill: $chart-green;
+        }
+
+        &:nth-child(2) {
+            fill: $chart-blue;
+        }
+
+        &:nth-child(3) {
+            fill: $chart-grey;
+        }
+
+        &:nth-child(4) {
+            fill: $chart-brown;
+        }
+
+        &:nth-child(5) {
+            fill: $chart-teal;
+        }
+
+        &:nth-child(6) {
+            fill: $chart-orange;
+        }
+
+        &:nth-child(7) {
+            fill: $chart-yellow;
+        }
+
+        &:highlight {
+            radius: 9;
+            size: 9;
+        }
+    }
+
+    marker {
+        radius: 7;
+        size: 7;
+
+        &:nth-child(1) {
+            fill: $chart-green;
+        }
+
+        &:nth-child(2) {
+            fill: $chart-blue;
+        }
+
+        &:nth-child(3) {
+            fill: $chart-grey;
+        }
+
+        &:nth-child(4) {
+            fill: $chart-brown;
+        }
+
+        &:nth-child(5) {
+            fill: $chart-teal;
+        }
+
+        &:nth-child(6) {
+            fill: $chart-orange;
+        }
+
+        &:nth-child(7) {
+            fill: $chart-yellow;
+        }
+    }
+}

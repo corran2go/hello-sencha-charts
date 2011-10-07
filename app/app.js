@@ -15,8 +15,12 @@ HelloCharts.log = function(msg) {
   console.log('[' + hours + ':' + minutes + ':' + seconds + '.' + milliseconds + '] - ' + msg);
 };
 
-HelloCharts.onTestTap = function() {
-  HelloCharts.log('onTestTap');
+HelloCharts.onSmartphoneTap = function() {
+  HelloCharts.views.viewport.setActiveItem(0);
+};
+
+HelloCharts.onBrowserTap = function() {
+  HelloCharts.views.viewport.setActiveItem(1);
 };
 
 HelloCharts.log('app loaded');

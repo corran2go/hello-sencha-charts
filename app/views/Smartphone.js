@@ -1,4 +1,5 @@
 HelloCharts.views.smartphoneChart = new Ext.chart.Chart({
+  // theme: 'MyTheme',
   store: HelloCharts.stores.smartphones,
   animate: false,
   shadow: true,
@@ -34,7 +35,7 @@ HelloCharts.views.smartphoneChart = new Ext.chart.Chart({
         'windowsmobile'
       ],
       minimum: 0,
-      maximum: 70,
+      maximum: 60,
       minorTickSteps: 1,
       majorTickSteps: 10,
       grid: {
@@ -70,8 +71,8 @@ HelloCharts.views.smartphoneChart = new Ext.chart.Chart({
       smooth: false,
       axis: 'left',
       xField: 'quarter',
-      yField: 'android',
-      title: 'Android'
+      yField: 'ios',
+      title: 'iOS'
     },
     {
       type: 'line',
@@ -82,8 +83,8 @@ HelloCharts.views.smartphoneChart = new Ext.chart.Chart({
       smooth: false,
       axis: 'left',
       xField: 'quarter',
-      yField: 'ios',
-      title: 'iOS'
+      yField: 'android',
+      title: 'Android'
     },
     {
       type: 'line',
@@ -122,12 +123,12 @@ HelloCharts.views.smartphoneChart = new Ext.chart.Chart({
       title: 'bada'
     },
     {
-      type: 'line',
       highlight: {
         size: 7,
         radius: 7
       },
       smooth: false,
+      type: 'line',
       axis: 'left',
       xField: 'quarter',
       yField: 'windowsphone',
@@ -163,8 +164,8 @@ HelloCharts.views.smartphonePanel = new Ext.chart.Panel({
   dockedItems: [
     {
       xtype: 'button',
-      text: 'Test',
-      handler: HelloCharts.onTestTap
+      text: 'Browser Usage',
+      handler: HelloCharts.onBrowserTap
     }
   ],
   items: [
