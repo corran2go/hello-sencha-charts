@@ -5,6 +5,21 @@ HelloCharts.views.browserChart = new Ext.chart.Chart({
   legend: {
     position: 'top'
   },
+  interactions: [
+    {
+      type: 'iteminfo',
+      listeners: {
+        show: function(interaction, item, panel) {
+          var storeItem = item.storeItem;
+          panel.dockedItems.items[0].setTitle("Details");
+          panel.update([
+            '<ul><li><b>Monat: </b>' + storeItem.get('month') + '</li>',
+            '<li><b>Marktanteil: </b>' + item.value[1]+ '%</li></ul>'
+          ].join(''));
+        }
+      }
+    }
+  ],
   axes: [
     {
       type: 'Numeric',

@@ -11,7 +11,7 @@ HelloCharts.stores.smartphones = new Ext.data.JsonStore({
   ],
   data: [
     {
-      quarter: 'Q2/10',
+      quarter: 'Q2/2010',
       android: 18,
       ios: 14,
       symbian: 44,
@@ -21,7 +21,7 @@ HelloCharts.stores.smartphones = new Ext.data.JsonStore({
       windowsmobile: 3
     },
     {
-      quarter: 'Q3/10',
+      quarter: 'Q3/2010',
       android: 25,
       ios: 18,
       symbian: 36,
@@ -31,7 +31,7 @@ HelloCharts.stores.smartphones = new Ext.data.JsonStore({
       windowsmobile: 3
     },
     {
-      quarter: 'Q4/10',
+      quarter: 'Q4/2010',
       android: 30,
       ios: 16,
       symbian: 32,
@@ -41,7 +41,7 @@ HelloCharts.stores.smartphones = new Ext.data.JsonStore({
       windowsmobile: 2
     },
     {
-      quarter: 'Q1/11',
+      quarter: 'Q1/2011',
       android: 35,
       ios: 18,
       symbian: 25,
@@ -51,7 +51,7 @@ HelloCharts.stores.smartphones = new Ext.data.JsonStore({
       windowsmobile: 2
     },
     {
-      quarter: 'Q2/11',
+      quarter: 'Q2/2011',
       android: 45,
       ios: 19,
       symbian: 16,
@@ -61,7 +61,7 @@ HelloCharts.stores.smartphones = new Ext.data.JsonStore({
       windowsmobile: 0.5
     },
     {
-      quarter: 'Q4/11*',
+      quarter: 'Q4/2011*',
       android: 52,
       ios: 25,
       symbian: 4,
