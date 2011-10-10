@@ -17,10 +17,12 @@ HelloCharts.log = function(msg) {
 
 HelloCharts.onSmartphoneTap = function() {
   HelloCharts.views.viewport.setActiveItem(0);
+  HelloCharts.views.showSmartphoneFooter();
 };
 
 HelloCharts.onBrowserTap = function() {
   HelloCharts.views.viewport.setActiveItem(1);
+  HelloCharts.views.showBrowserFooter();
 };
 
 HelloCharts.log('app loaded');

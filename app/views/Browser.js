@@ -46,7 +46,7 @@ HelloCharts.views.browserChart = new Ext.chart.Chart({
       label: {
         font: '16px Helvetica, sans-serif'
       },
-      title: 'Market Share Mobile Browsing in %'
+      title: 'Marktanteil Mobile Internetnutzung in %'
     },
     {
       type: 'Category',
@@ -55,7 +55,7 @@ HelloCharts.views.browserChart = new Ext.chart.Chart({
       label: {
         font: '16px Helvetica, sans-serif'
       },
-      title: 'Month of the Year'
+      title: 'Monat'
     }
   ],
   series: [
@@ -117,14 +117,19 @@ HelloCharts.views.browserChart = new Ext.chart.Chart({
       axis: 'left',
       xField: 'month',
       yField: 'other',
-      title: 'Andere*' // Unbekannt, Sony Ericsson, Samsung, Playstation
+      title: 'Andere*'
     }
   ]
 });
 
+HelloCharts.views.showBrowserFooter = function() {
+  HelloCharts.views.statusToolbar.getComponent('status').update('<span style="font-weight: bold; font-size: 70%; color: white;">Quelle: StatCounter Mobile OS Stats DE | http://gs.statcounter.com/<br/>*) Andere: Unbekannt, Playstation, Sony Ericsson, Samsung</span>');
+};
+
 HelloCharts.views.browserChart.on({
   'redraw': function(chart) {
     HelloCharts.log('chart redraw');
+    HelloCharts.views.showBrowserFooter();
   },
   'refresh': function(chart) {
     HelloCharts.log('chart refresh');
@@ -132,12 +137,12 @@ HelloCharts.views.browserChart.on({
 });
 
 HelloCharts.views.browserPanel = new Ext.chart.Panel({
-  title: 'Market Share Mobile Browsing in %',
+  title: 'Marktanteil Mobile Internetnutzung in %',
   fullscreen: true,
   dockedItems: [
     {
       xtype: 'button',
-      text: 'Smartphone Sales',
+      text: 'Smartphone Verkäufe',
       handler: HelloCharts.onSmartphoneTap
     }
   ],

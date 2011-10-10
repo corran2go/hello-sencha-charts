@@ -14,7 +14,7 @@ HelloCharts.views.smartphoneChart = new Ext.chart.Chart({
           var storeItem = item.storeItem;
           panel.dockedItems.items[0].setTitle("Details");
           panel.update([
-            '<ul><li><b>Zeitraum: </b>' + storeItem.get('quarter') + '</li>',
+            '<ul><li><b>Quartal: </b>' + storeItem.get('quarter') + '</li>',
             '<li><b>Marktanteil: </b>' + item.value[1]+ '%</li></ul>'
           ].join(''));
         }
@@ -49,7 +49,7 @@ HelloCharts.views.smartphoneChart = new Ext.chart.Chart({
       label: {
         font: '16px Helvetica, sans-serif'
       },
-      title: 'Market Share Smartphone Sales in %'
+      title: 'Marktanteil Smartphone Verkäufe in %'
     },
     {
       type: 'Category',
@@ -58,7 +58,7 @@ HelloCharts.views.smartphoneChart = new Ext.chart.Chart({
       label: {
         font: '16px Helvetica, sans-serif'
       },
-      title: 'Quarter of the Year'
+      title: 'Quartal'
     }
   ],
   series: [
@@ -149,9 +149,14 @@ HelloCharts.views.smartphoneChart = new Ext.chart.Chart({
   ]
 });
 
+HelloCharts.views.showSmartphoneFooter = function() {
+  HelloCharts.views.statusToolbar.getComponent('status').update('<span style="font-weight: bold; font-size: 70%; color: white;">Quelle: TomiAhonen Consulting August 2011 | Berechneter  Durchschnitt der Zahlen von: Gartner, IDC, Canalys und Strategy Analytics<br/>*) Prognose: TomiAhonen Consulting 7 Sept 2011</span>');
+};
+
 HelloCharts.views.smartphoneChart.on({
   'redraw': function(chart) {
     HelloCharts.log('chart redraw');
+    HelloCharts.views.showSmartphoneFooter();
   },
   'refresh': function(chart) {
     HelloCharts.log('chart refresh');
@@ -159,12 +164,12 @@ HelloCharts.views.smartphoneChart.on({
 });
 
 HelloCharts.views.smartphonePanel = new Ext.chart.Panel({
-  title: 'Market Share Smartphone Sales in %',
+  title: 'Marktanteil Smartphone Verkäufe in %',
   fullscreen: true,
   dockedItems: [
     {
       xtype: 'button',
-      text: 'Browser Usage',
+      text: 'Mobile Internetnutzung',
       handler: HelloCharts.onBrowserTap
     }
   ],
