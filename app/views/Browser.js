@@ -12,8 +12,9 @@ HelloCharts.views.browserChart = new Ext.chart.Chart({
       fields: [
         'android',
         'ios',
-        'symbian'/*,
-        'blackberry'*/
+        'symbian',
+        'blackberry',
+        'other'
       ],
       minimum: 0,
       maximum: 80,
@@ -37,7 +38,7 @@ HelloCharts.views.browserChart = new Ext.chart.Chart({
       position: 'bottom',
       fields: [ 'month' ],
       label: {
-        font: '14px Helvetica, sans-serif'
+        font: '16px Helvetica, sans-serif'
       },
       title: 'Month of the Year'
     }
@@ -78,6 +79,30 @@ HelloCharts.views.browserChart = new Ext.chart.Chart({
       xField: 'month',
       yField: 'symbian',
       title: 'Symbian'
+    },
+    {
+      type: 'line',
+      highlight: {
+        size: 7,
+        radius: 7
+      },
+      smooth: false,
+      axis: 'left',
+      xField: 'month',
+      yField: 'blackberry',
+      title: 'Blackberry'
+    },
+    {
+      type: 'line',
+      highlight: {
+        size: 7,
+        radius: 7
+      },
+      smooth: false,
+      axis: 'left',
+      xField: 'month',
+      yField: 'other',
+      title: 'Andere*' // Unbekannt, Sony Ericsson, Samsung, Playstation
     }
   ]
 });
